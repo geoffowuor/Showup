@@ -1,0 +1,31 @@
+{% load static %}
+<head>
+{% block title %}<title>Showup|find all events</title>{% endblock title %}
+<link href="{%static "style.css"%}" rel="stylesheet">
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<nav class="nav">
+      <h2>Show<span>up</span></h2>
+    <div class="links">
+  
+    <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Find Events</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Signup</a></li>
+        
+    </ul>
+    </div>
+    <form method="GET" action="{% url 'search' %}">
+        <div class = "content">
+                <input type="text" name="q" placeholder="Search for an event" value="{{ query }}"></input>
+                <button type="submit"><box-icon name='search'></box-icon></button>
+                </div>
+            </form>
+    
+
+</nav>
+{% block content %}
+
+{% endblock content %}
