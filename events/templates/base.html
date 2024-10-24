@@ -2,12 +2,15 @@
 <head>
 {% block title %}<title>Showup|find all events</title>{% endblock title %}
 <link href="{%static "style.css"%}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <nav class="nav">
-      <h2>Show<span>up</span></h2>
+     <h2>Showup</h2>
     <div class="links">
   
     <ul>
@@ -22,7 +25,7 @@
     <form method="GET" action="{% url 'search' %}">
         <div class = "content">
                 <input type="text" name="q" placeholder="Search for an event" value="{{ query }}"></input>
-                <button type="submit"><box-icon name='search'></box-icon></button>
+                <button type="submit"><box-icon name='search' color='#ffffff' ></box-icon></button>
                 </div>
             </form>
     

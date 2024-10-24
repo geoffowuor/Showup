@@ -2,15 +2,15 @@
 {% block content %}
     {% if query %}
         <p>Results for: "{{ query }}"</p>
-        <p>Found {{results.count}} blog(s)</p>
+        <p>Found {{results.count}} event(s)</p>
         {% if results %}
             <ul>
-                {% for Event in events%}
-                <div class="posts">
+                {% for Event in Events%}
+                <div class="events">
                         <div class="item">
-                       <a href="{% url 'event_detail' event.id %}"><img src="{{Event.image.url}}"  alt="{{ event.title }}"></a>
-                      <h2>{{ Post.title }}</h2>
-                      <p>${{ Post.body }}</p>
+                       <a href="{% url 'event_detail' event.id %}"><img src="{{Event.photo.url}}"  alt="{{ event.name }}"></a>
+                      <h2>{{ event.name }}</h2>
+                      <p>${{ event.description }}</p>
                      
                     
                 </div>

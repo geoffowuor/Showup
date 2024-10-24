@@ -3,13 +3,14 @@ from .models import Event
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    events = Event.objects.all()  # Fetch all items from the database
+    return render(request, 'index.html',{'events': events})
 
 #search view
 def search(request):
-    query = request.GET.get('q', '') # Get the search term from the query parameters
+    query = request.GET.get('q', '') # Gets the search term from the query parameters
     if query:
-        results = Event.objects.filter(title__icontains=query)
+        results = Event.objects.filter(name__icontains=query)
     else:
         results = Event.objects.none() # No search results if no query
         

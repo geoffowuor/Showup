@@ -1,7 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="img">
+<div class="hero-section">
+    <div class="content">
+    <h2>WELCOME TO SHOWUP</h2>
+    <P>Your number one plug for all events</p>
+    </div>
+    </div>
+    <div class="title">
+        <h2 class="text-success"> Top Trending Events</h2>
 
     </div>
+     <div class="event-list">
+        {% for event in events %}
+            <div class="event">
+            <img src="{{event.photo.url}}" alt="{{event.name}}">
+            <h2>{{event.name}}</h2>
+            <p>{{event.description|truncatechars:150}}</p>
+            <li><box-icon name='calendar' color="blue"></box-icon>{{event.date}}</li>
+            </div>
+
+
+
+           
+        {% endfor %}
+     </div>
+    
 {% endblock content %}
