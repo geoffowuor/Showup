@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="event-detail">
+    <img src='{{event.photo.url}}' alt="{{event.name}}">
+    <h2>{{event.name}}</h2>
+    <p>{{event.description}}</p>
+    <div class="rsvps">
+
+    </div>
+    <div class="event-info">
+    <li><box-icon name='calendar' color="blue"></box-icon>{{event.date}}</li>
+
+    </div>
+
+</div>
+
+{% endblock content %}

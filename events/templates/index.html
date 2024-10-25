@@ -4,17 +4,19 @@
 <div class="hero-section">
     <div class="content">
     <h2>WELCOME TO SHOWUP</h2>
-    <P>Your number one plug for all events</p>
+    <button>Explore Events<span class="material-symbols-outlined">
+        arrow_forward
+        </span></button>
     </div>
     </div>
     <div class="title">
-        <h2 class="text-success"> Top Trending Events</h2>
+        <h2 class="text-success"> Top Trending Events</h2><hr>
 
     </div>
      <div class="event-list">
         {% for event in events %}
             <div class="event">
-            <img src="{{event.photo.url}}" alt="{{event.name}}">
+                <a href="{% url 'event_detail' event.name %}">  <img src="{{event.photo.url}}" alt="{{event.name}}"></a>
             <h2>{{event.name}}</h2>
             <p>{{event.description|truncatechars:150}}</p>
             <li><box-icon name='calendar' color="blue"></box-icon>{{event.date}}</li>

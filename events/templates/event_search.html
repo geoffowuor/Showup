@@ -5,7 +5,7 @@
         <p>Found {{results.count}} event(s)</p>
         {% if results %}
             <ul>
-                {% for Event in Events%}
+                {% for event in events%}
                 <div class="events">
                         <div class="item">
                        <a href="{% url 'event_detail' event.id %}"><img src="{{Event.photo.url}}"  alt="{{ event.name }}"></a>
