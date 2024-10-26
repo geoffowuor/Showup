@@ -19,7 +19,9 @@
                 <a href="{% url 'event_detail' event.name %}">  <img src="{{event.photo.url}}" alt="{{event.name}}"></a>
             <h2>{{event.name}}</h2>
             <p>{{event.description|truncatechars:150}}</p>
-            <li><box-icon name='calendar' color="blue"></box-icon>{{event.date}}</li>
+            
+          <p>  <li><box-icon name='calendar' color="blue"></box-icon>{{event.day_date}}</li></p>
+           <p> <li><box-icon name='time-five' color="blue"></box-icon>{{event.time}}</li></p>
             </div>
 
 

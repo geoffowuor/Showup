@@ -156,6 +156,7 @@ nav ul li a{
 }
 .event-detail img{
     display: block;
+    margin-bottom: 15px;
     border-radius: 12px;
     object-fit: cover;
     height: 300px;
@@ -166,6 +167,41 @@ nav ul li a{
     letter-spacing: 0.02em;
 }
 .event-detail p{
+    width: 100%;
+    height: auto;
     line-height: 1.4;
     letter-spacing: 0.05em;
 }
+.date_rsvp{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    background: whitesmoke;
+}                                                                                                                                                                               
+.date_rsvp li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+.date_rsvp button{
+    border-style: none;
+    border-radius: 15px;
+    padding: 12px;
+    color: white;
+    background: black;
+}
+.date_rsvp button:hover{
+    color: black;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.date_rsvp li{
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
