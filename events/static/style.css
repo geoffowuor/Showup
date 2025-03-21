@@ -1,24 +1,29 @@
 *{
     margin: 0;
     max-width: 100%;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: "Quicksand", sans-serif;
+    
 }
 .nav {
     display: flex;
     overflow: hidden;
     justify-content: space-around;
-    background: black;
-    color: white;
+    justify-items: center;
+    align-items: center;
+    background: grey;
+    color: black;
     width: 100%;
     top: 0;
     z-index: 999;
-    padding: 15px;
+    padding: 10px;
     position: fixed;
 
 
 }
 .nav h2{
-    font-family: "Montserrat", sans-serif;
+    
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 nav ul{
@@ -31,25 +36,7 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: white;
-}
-.nav form .content{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.nav form input{
-    background: white;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 7.5px;
-
-}
-.nav form button{
-    background: black;
-    border-style: none;
-    margin-left: 1rem;
-    cursor: pointer;
+    color: black;
 }
 
 /*hero-section section styling*/
@@ -57,35 +44,53 @@ nav ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(images/young-adult-having-fun-white-party.jpg);
+    background: url(images/real_-jansen-L4fpVb31kXs-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    opacity: 0.7;
     object-fit: fill;
-    height: 100vh;
+    height: 80vh;
+}
+.hero-section .content{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 80%;
+}
+form{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+form input{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid  rgba(255, 255, 255, 0.5);;
+    color: black;
+    border-radius: 15px;
+    padding: 7.5px;
+    max-width: 80%;
+
+}
+ form button{
+    background: rgba(255, 255, 255, 0.001);
+    border-style: none;
+    margin-left: 1rem;
+    cursor: pointer;
 }
 .hero-section .content h2{
-    background: rgba(255, 255, 255, 0.5);
+    opacity: 13;
     color: black;
-    font-family: "Rubik Wet Paint", system-ui;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     font-weight: 400;
     font-style: normal;
 }
-.hero-section .content button{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    background:  rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 15px;
-    padding: 12px;
-    border-style: none;
-    margin-top: 10px;
-    margin-right: 2px;
 
-}
 .hero-section .content button:hover{
     background:  rgba(255, 255, 255, 0.5);
     color: black;
@@ -119,13 +124,17 @@ nav ul li a{
     margin-left: 5%;
     margin-right: 5%;
 }
+.event-list .event{
+    border-radius: 14px;
+    box-shadow: 0 4px 6px 0 grey;
+    padding: 10px;
+}
 .event-list img{
     max-width: 100%;
     height: 250px;
     border-radius: 15px;
 }
 .event-list h2{
-    font-family: "Montserrat", sans-serif;
     line-height: 1.2;
     letter-spacing: 0.02em;
 }
@@ -169,7 +178,7 @@ nav ul li a{
 .event-detail p{
     width: 100%;
     height: auto;
-    line-height: 1.4;
+    line-height: 1.5;
     letter-spacing: 0.05em;
 }
 .date_rsvp{
@@ -192,11 +201,12 @@ nav ul li a{
     border-radius: 15px;
     padding: 12px;
     color: white;
-    background: black;
+    background: blue;
+    cursor: pointer;
 }
 .date_rsvp button:hover{
-    color: black;
-    background: white;
+    color: white;
+    background: rgb(50, 41, 41);
     transition: transform 0.3s ease;
 }
 
